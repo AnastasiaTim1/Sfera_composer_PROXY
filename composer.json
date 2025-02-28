@@ -1,0 +1,72 @@
+{
+    "name": "altek/sss",
+    "description": "The auditing & accountability package for Laravel's Eloquent ORM.",
+    "keywords": [
+        "accountability",
+        "accountable",
+        "accountant",
+        "audit",
+        "auditing",
+        "changes",
+        "eloquent",
+        "history",
+        "log",
+        "logging",
+        "laravel",
+        "ledger",
+        "liable",
+        "lumen",
+        "record"
+    ],
+    "homepage": "https://altek.gitlab.io/accountant/",
+    "type": "package",
+    "license": "MIT",
+    "support": {
+        "issues": "https://gitlab.com/altek/accountant/issues",
+        "source": "https://gitlab.com/altek/accountant"
+    },
+    "authors": [
+        {
+            "name": "Quetzy Garcia",
+            "email": "quetzyg@altek.org"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
+        "illuminate/console": "^8.0|^9.0|^10.0",
+        "illuminate/database": "^8.0|^9.0|^10.0",
+        "illuminate/filesystem": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0|^7.0|^8.0",
+        "altek/eventually": "^2.0",
+        "roave/security-advisories": "dev-latest",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Altek\\Accountant\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Altek\\Accountant\\Tests\\": "tests/",
+            "Altek\\Accountant\\Tests\\Database\\Factories\\": "tests/database/factories"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Altek\\Accountant\\AccountantServiceProvider"
+            ]
+        }
+    },
+    "suggest": {
+        "altek/eventually": "Required for keeping track of BelongsToMany and MorphToMany relations.",
+        "laravelista/lumen-vendor-publish": "Required to publish the package config file in Lumen."
+    }
+}
